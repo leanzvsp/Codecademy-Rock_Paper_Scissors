@@ -1,7 +1,7 @@
-  //Normal Version
+  //rPS version with 'bomb' cheat code
 const getUserChoice = userInput => {
   userInput = userInput.toLowerCase();
-  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
     return userInput;
   } else {
     console.log('Insert a valid option!');
@@ -47,6 +47,9 @@ const determineWinner = (userChoice, computerChoice) => {
     } else {
       return 'You Won!';
     }
+  }
+  if (userChoice === 'bomb') {
+    return 'You Won';
   }
 };
 
